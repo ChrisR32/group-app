@@ -1,2 +1,2 @@
-# group-app
+# March 26 Coder Academy Hackathon
  
