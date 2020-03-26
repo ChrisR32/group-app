@@ -2,17 +2,23 @@
 require 'tty-box'
 require 'tty-prompt'
 require 'tty-screen'
+require 'time'
 # require 'tty-progressbar'
 require 'io/console'
 
+
 ### Methods ##
 def draw_frame_main()
-  print TTY::Box.frame(
-    width:40,
-    height: 10,
+  time = Time.now.to_s
+  box = TTY::Box.frame(
+    width:30,
+    height: 5,
     style: {bg: :red,}
-    )
+    ) do
+      "Study Time!!\n#{time}\n"
     end
+  return box  
+end
 
 def draw_frame_s_break()
   print TTY::Box.frame(
@@ -32,12 +38,10 @@ def draw_frame_l_break()
   
 end
 
-STDIN.getch
-system "clear"
-draw_frame_main()
-STDIN.getch
-system "clear"
-draw_frame_s_break()
-STDIN.getch
-system "clear"
-draw_frame_l_break()
+puts draw_frame_main()
+# STDIN.getch
+# system "clear"
+# draw_frame_s_break()
+# STDIN.getch
+# system "clear"
+# draw_frame_l_break()
