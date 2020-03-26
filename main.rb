@@ -1,5 +1,8 @@
 ### GEMS ###
 require 'tty-box'
+require 'tty-prompt'
+require 'tty-screen'
+require 'tty-progressbar'
 
 ### Libs ###
 require_relative 'lib/frame'
