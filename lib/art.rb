@@ -288,51 +288,51 @@ def clearboard(cursor, start_row, start_line)
     start_line = start_line + 1
     end
     end 
-print_logo(cursor, 4, 1)
+# print_logo(cursor, 4, 1)
 
-def for_testing(cursor)    
-if $response == 't1'
-clearboard(cursor,0,10)
-print_tomato(cursor, 3, 10)
-elsif $response == 't2'
-    clearboard(cursor,0,10)
-print_tomato(cursor, 3, 10)
-print_tomato(cursor, 33, 10)
-elsif $response == 't3'
-    clearboard(cursor,0,10)
-print_tomato(cursor, 3, 10)
-print_tomato(cursor, 33, 10)
-print_tomato(cursor, 63, 10)
-elsif $response == 't4'
-    clearboard(cursor,0,10)
-print_tomato(cursor, 3, 10)
-print_tomato(cursor, 33, 10)
-print_tomato(cursor, 63, 10)
-print_tomato(cursor, 93, 10)
-elsif $response == 'bq'
-    clearboard(cursor,3,25)
-print_time_for_a(cursor, 3, 26)
-print_quick_break(cursor, 3, 35)
-elsif $response == 'bl'
-    clearboard(cursor,3,25)
-print_time_for_a(cursor, 3, 26)
-print_long_break(cursor, 3, 35)
-elsif $response == 'a'
-    clearboard(cursor, 0, 13)
-    print_about(cursor, 3, 13)
-elsif $response == 'exit'
-exit(true)
-end
-end
+# def for_testing(cursor)    
+# if $response == 't1'
+# clearboard(cursor,0,10)
+# print_tomato(cursor, 3, 10)
+# elsif $response == 't2'
+#     clearboard(cursor,0,10)
+# print_tomato(cursor, 3, 10)
+# print_tomato(cursor, 33, 10)
+# elsif $response == 't3'
+#     clearboard(cursor,0,10)
+# print_tomato(cursor, 3, 10)
+# print_tomato(cursor, 33, 10)
+# print_tomato(cursor, 63, 10)
+# elsif $response == 't4'
+#     clearboard(cursor,0,10)
+# print_tomato(cursor, 3, 10)
+# print_tomato(cursor, 33, 10)
+# print_tomato(cursor, 63, 10)
+# print_tomato(cursor, 93, 10)
+# elsif $response == 'bq'
+#     clearboard(cursor,3,25)
+# print_time_for_a(cursor, 3, 26)
+# print_quick_break(cursor, 3, 35)
+# elsif $response == 'bl'
+#     clearboard(cursor,3,25)
+# print_time_for_a(cursor, 3, 26)
+# print_long_break(cursor, 3, 35)
+# elsif $response == 'a'
+#     clearboard(cursor, 0, 13)
+#     print_about(cursor, 3, 13)
+# elsif $response == 'exit'
+# exit(true)
+# end
+# end
 
-until $exit == "yes"
-    print cursor.move_to(120, 42)
-    print "TYPE: 't1'-'t4' TOMATOS, 'bq' QUICK BREAK, 'bl' LONG BREAK, 'a' ABOUT, 'exit' EXIT"
-    print cursor.move_to(120, 43)
-    $response = gets.chomp
-    for_testing(cursor)
-end
+# until $exit == "yes"
+#     print cursor.move_to(120, 42)
+#     print "TYPE: 't1'-'t4' TOMATOS, 'bq' QUICK BREAK, 'bl' LONG BREAK, 'a' ABOUT, 'exit' EXIT"
+#     print cursor.move_to(120, 43)
+#     $response = gets.chomp
+#     for_testing(cursor)
+# end
     
      
-      exit(true)
+#       exit(true)
     

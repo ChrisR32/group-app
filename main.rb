@@ -13,11 +13,8 @@ require_relative 'lib/menu.rb'
 require_relative 'lib/art.rb'
 
 while true
-  system "clear"
-  # puts print_logo()
-  system "clear"
-  # puts print_tomato()
-  system "clear"
+  # print_logo(cursor, 1, 1,)
+  # print cursor.move_to(1,8)
   menu()
-  system "clear"
+  # system "clear"
 end

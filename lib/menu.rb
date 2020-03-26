@@ -1,8 +1,20 @@
 require 'colorize'
 require 'tty-prompt'
 require 'tty-box'
+require 'rainbow'
+require 'io/console'
+require_relative 'art'
+cursor = TTY::Cursor
+
+$exit = "noway"
+$response = ''
+
 
 def menu()
+    cursor = TTY::Cursor
+    print_logo(cursor, 1, 1,)
+    print cursor.move_to(1,12)
+    # system "clear"
     time_array = ["00:05", "00:10", "00:15","00:20", "00:25", "00:30", "00:35", "00:40", "00:45"]
     prompt=TTY::Prompt.new
     userselect=prompt.select("What would you like to do?", %w(Start About Exit))
