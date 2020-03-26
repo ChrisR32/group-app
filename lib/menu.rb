@@ -10,11 +10,12 @@ if userselect == "Start"
     #code
     p "start"
 elsif userselect == "About"
+    
     def draw_frame_about()
          TTY::Box.frame(
           width:40,
           height: 10,
-          style: {bg: :yellow,},
+          style: {bg: :yellow},
           align: :center,
           padding: 2
           ) do
@@ -23,11 +24,24 @@ elsif userselect == "About"
       end
 
      puts draw_frame_about()
+
 elsif userselect == "Exit"
     system = "clear"
-    puts "Bye, have a good day!"
-    sleep(2)
     
+    def endbox()
+        TTY::Box.frame(
+        width:40,
+        height: 10,
+        style: {bg: :yellow},
+        align: :center,
+        padding: 3
+        ) do
+        "Bye, have a good day!".colorize(:color => :black, :background=> :yellow)
+        end
+    end
+
+    puts endbox()
+
 end
 # while true
 #   menu()
