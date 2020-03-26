@@ -10,7 +10,7 @@ require 'colorize'
 ### Libs ###
 require_relative 'lib/frame.rb'
 require_relative 'lib/menu.rb'
-# require_relative 'lib/art.rb'
+require_relative 'lib/art.rb'
 
 while true
   system "clear"
