@@ -8,6 +8,101 @@ $response = ''
 
 system ("clear")
 
+def print_about(cursor, start_row, start_line)
+
+    print cursor.move_to(start_row, start_line)
+    print Rainbow(" ______             _                          _   _                ").rebeccapurple
+    start_line += 1
+    print cursor.move_to(start_row, start_line)
+    start_line += 1
+    print Rainbow(" |  _  \\           (_)                        | | | |           ").rebeccapurple + Rainbow("  _ ").white
+    print cursor.move_to(start_row, start_line)
+    start_line += 1
+    print Rainbow(" | | | |  ___  ___  _   __ _  _ __    ___   __| | | |__   _   _ ").rebeccapurple + Rainbow(" (_) ").white
+    print cursor.move_to(start_row, start_line)
+    start_line += 1
+    print Rainbow(" | | | | / _ \\/ __|| | / _` || '_ \\  / _ \\ / _` | | '_ \\ | | | |    ").rebeccapurple
+    print cursor.move_to(start_row, start_line)
+    start_line += 1
+    print Rainbow(" | |/ / |  __/\\__ \\| || (_| || | | ||  __/| (_| | | |_) || |_| |").rebeccapurple + Rainbow("  _  ").white
+    print cursor.move_to(start_row, start_line)
+    start_line += 1
+    print Rainbow(" |___/   \\___||___/|_| \\__, ||_| |_| \\___| \\__,_| |_.__/  \\__, |").rebeccapurple + Rainbow(" (_) ").white
+    print cursor.move_to(start_row, start_line)
+    start_line += 1
+    print Rainbow("                        __/ |                              __/ |    ").rebeccapurple
+    print cursor.move_to(start_row, start_line)
+    start_line += 1
+    print Rainbow("                       |___/                              |___/     ").rebeccapurple
+    print cursor.move_to(start_row, start_line)
+    start_line += 1
+    print Rainbow("                   ___       _                                      ").mediumspringgreen
+    print cursor.move_to(start_row, start_line)
+    start_line += 1
+    print Rainbow("                  / _ \\     | |                                     ").mediumspringgreen
+    print cursor.move_to(start_row, start_line)
+    start_line += 1
+    print Rainbow("                 / /_\\ \\  __| |  __ _  _ __ ___                     ").mediumspringgreen
+    print cursor.move_to(start_row, start_line)
+    start_line += 1
+    print Rainbow("                 |  _  | / _` | / _` || '_ ` _ \\                    ").mediumspringgreen
+    print cursor.move_to(start_row, start_line)
+    start_line += 1
+    print Rainbow("                 | | | || (_| || (_| || | | | | |").mediumspringgreen + Rainbow("  _     ").white           
+    print cursor.move_to(start_row, start_line)
+    start_line += 1
+    print Rainbow("                 \\_| |_/ \\__,_| \\__,_||_| |_| |_|").mediumspringgreen + Rainbow(" ( )    ").white           
+    print cursor.move_to(start_row, start_line)
+    start_line += 1
+    print Rainbow("                                                 ").mediumspringgreen + Rainbow(" |/     ").white           
+    print cursor.move_to(start_row, start_line)
+    start_line += 1
+    print Rainbow("                                                                    ").mediumspringgreen
+    print cursor.move_to(start_row, start_line)
+    start_line += 1
+    print Rainbow("             ___              _                                     ").mediumvioletred
+    print cursor.move_to(start_row, start_line)
+    start_line += 1
+    print Rainbow("            / _ \\            | |                                    ").mediumvioletred
+    print cursor.move_to(start_row, start_line)
+    start_line += 1
+    print Rainbow("           / /_\\ \\ _ __    __| | _ __   ___ __      __              ").mediumvioletred
+    print cursor.move_to(start_row, start_line)
+    start_line += 1
+    print Rainbow("           |  _  || '_ \\  / _` || '__| / _ \\\\ \\ /\\ / /              ").mediumvioletred
+    print cursor.move_to(start_row, start_line)
+    start_line += 1
+    print Rainbow("           | | | || | | || (_| || |   |  __/ \\ V  V / ").mediumvioletred + Rainbow("  _     ").white      
+    print cursor.move_to(start_row, start_line)
+    start_line += 1
+    print Rainbow("           \\_| |_/|_| |_| \\__,_||_|    \\___|  \\_/\\_/  ").mediumvioletred + Rainbow(" ( )    ").white      
+    print cursor.move_to(start_row, start_line)
+    start_line += 1
+    print Rainbow("                                                      ").mediumvioletred + Rainbow(" |/     ").white      
+    print cursor.move_to(start_row, start_line)
+    start_line += 1
+    print Rainbow("                                                                    ").mediumvioletred
+    print cursor.move_to(start_row, start_line)
+    start_line += 1
+    print Rainbow("                        _____  _            _                       ").yellow
+    print cursor.move_to(start_row, start_line)
+    start_line += 1
+    print Rainbow("                ___   ").white + Rainbow(" /  __ \\| |          (_)                      ").yellow
+    print cursor.move_to(start_row, start_line)
+    start_line += 1
+    print Rainbow("               ( _ )  ").white + Rainbow(" | /  \\/| |__   _ __  _  ___                  ").yellow
+    print cursor.move_to(start_row, start_line)
+    start_line += 1
+    print Rainbow("               / _ \\/\\").white + Rainbow(" | |    | '_ \\ | '__|| |/ __|                 ").yellow
+    print cursor.move_to(start_row, start_line)
+    start_line += 1
+    print Rainbow("              | (_>  <").white + Rainbow(" | \\__/\\| | | || |   | |\\__ \\").yellow + Rainbow("  _   ").white           
+    print cursor.move_to(start_row, start_line)
+    start_line += 1
+    print Rainbow("               \\___/\\/").white + Rainbow("  \\____/|_| |_||_|   |_||___/").yellow + Rainbow(" (_)  ").white           
+                                                                       
+end
+
 def print_logo(cursor, start_row, start_line)
 print cursor.move_to(start_row, start_line)
 print Rainbow("                                                                88                                   ").palevioletred  
@@ -222,6 +317,9 @@ elsif $response == 'bl'
     clearboard(cursor,3,25)
 print_time_for_a(cursor, 3, 26)
 print_long_break(cursor, 3, 35)
+elsif $response == 'a'
+    clearboard(cursor, 0, 13)
+    print_about(cursor, 3, 13)
 elsif $response == 'exit'
 exit(true)
 end
@@ -229,7 +327,7 @@ end
 
 until $exit == "yes"
     print cursor.move_to(120, 42)
-    print "t1-t4, bq, bl, exit"
+    print "TYPE: 't1'-'t4' TOMATOS, 'bq' QUICK BREAK, 'bl' LONG BREAK, 'a' ABOUT, 'exit' EXIT"
     print cursor.move_to(120, 43)
     $response = gets.chomp
     for_testing(cursor)

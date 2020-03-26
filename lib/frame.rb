@@ -49,11 +49,19 @@ def draw_frame_s_break(x)
 end
 
 def draw_frame_l_break(x)
-  print TTY::Box.frame(
-    width:40,
-    height: 10,
-    style: {bg: :blue,}
-    )
+  time_array = ["00:05", "00:10", "00:15","00:20", "00:25", "00:30", "00:35", "00:40", "00:45"]
+  time_array.each do |x|
+    system "clear"
+    box = TTY::Box.frame(
+      width:40,
+      height: 10,
+      style: {bg: :blue,}
+      ) do
+        "Break Time!!\n#{x}\n"
+      end
+    puts box  
+  sleep(5)
+end  
 end
 
-timer_main(time_array)
+# timer_main(time_array)

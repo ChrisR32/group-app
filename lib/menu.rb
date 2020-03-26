@@ -2,15 +2,13 @@ require 'colorize'
 require 'tty-prompt'
 require 'tty-box'
 
-
-
 def menu()
+    time_array = ["00:05", "00:10", "00:15","00:20", "00:25", "00:30", "00:35", "00:40", "00:45"]
     prompt=TTY::Prompt.new
     userselect=prompt.select("What would you like to do?", %w(Start About Exit))
 
     if userselect == "Start"
-        #code
-        p "start"
+      timer_main(time_array)
     elsif userselect == "About"
         def draw_frame_about()
             TTY::Box.frame(
@@ -45,22 +43,10 @@ def menu()
 
 
     elsif userselect == "Exit"
-        system = "clear"
-        
-        def endbox()
-            TTY::Box.frame(
-            width:40,
-            height: 10,
-            style: {bg: :yellow},
-            align: :center,
-            padding: 3
-            ) do
-            "Bye, have a good day!".colorize(:color => :black, :background=> :yellow)
-            end
-        end
-        puts endbox()
+      exit()
     end
 end
 
 menu()
+
 
