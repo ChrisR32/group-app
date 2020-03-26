@@ -13,8 +13,5 @@ require_relative 'lib/menu.rb'
 require_relative 'lib/art.rb'
 
 while true
-  # print_logo(cursor, 1, 1,)
-  # print cursor.move_to(1,8)
   menu()
-  # system "clear"
 end
