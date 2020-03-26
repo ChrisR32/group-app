@@ -3,6 +3,7 @@ require 'tty-box'
 require 'tty-prompt'
 require 'tty-screen'
 require 'tty-progressbar'
+require 'io/console'
 
 ### Libs ###
 require_relative 'lib/frame'
