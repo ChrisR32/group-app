@@ -7,7 +7,7 @@ updated timer
 example setup:
 60 seconds work
 15 seconds break
-30 seconds long break
+45 seconds long break
 
 ## Pseudoscope 
 
