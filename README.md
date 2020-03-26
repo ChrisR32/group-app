@@ -1,5 +1,13 @@
 # March 26 Coder Academy Hackathon
 
+very 30 seconds refresh the screen
+new frame
+updated timer
+
+example setup:
+60 seconds work
+15 seconds break
+30 seconds long break
 
 ## Pseudoscope 
 
@@ -36,3 +44,4 @@ exit app
 else
 end
 end
+

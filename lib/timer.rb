@@ -1,19 +1,9 @@
-time_array = ["00:30", "01:30", "2:00"]
+time_array = ["00:05", "00:10", "00:15", "00:20", "00:25", "00:30", "00:35", "00:40", "00:45","00:50", "00:55", "01:00" ]
 
 def timer_main(time_array)
-  i = 0
-  for i in time_array
-    puts time_array[i].to_s
-    i += i
-  end
-end
-
-def timer_break_s()
-  
-end
-
-def timer_break_s()
-  
+  time_array.each do |x|
+    puts x
+  end  
 end
 
 timer_main(time_array)
